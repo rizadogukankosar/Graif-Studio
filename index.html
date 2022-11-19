@@ -14,18 +14,22 @@
 
 <body class="bg-gray-100">
     <script src="assets/js/slide_anim.js"></script>
-    <section id="cover" class=" flex flex-col h-screen justify-center items-center px-6 bg-gradient-to-r from-[#1E3237] via-[#1E3237] to-gray-600">
-        <img src="assets/images/big_logo.svg " alt="" class=" w-[1000px]">
-        <a href="#product" class="animate-bounce flex-col flex justify-center items-center mt-36">
-            <span class="text-white ">
-                Scroll Down
-            </span>
-            <img src="assets/images/arrow-down-icon.svg" class="w-6 mt-4" alt="">
-        </a>
+    <script src="assets/js/scroll_page_with_element.js"></script>
+    <nav class="bg-gradient-to-r from-[#1E3237] via-[#1E3237] to-gray-600 sticky top-0 md:px-16 lg:px-36 border-b-2 border-[#26f7e228] z-50">
+        <div class="flex flex-col md:flex-row md:justify-between items-center px-4 py-3">
+            <div class="flex items-center">
+                <img src="assets/images/logo_transparan.png" alt="logo" class="h-10 w-10">
+                <h1 class="text-2xl font-bold text-white ml-2">Graif Studio</h1>
+            </div>
+            <div class="flex items-center">
+                <button class="text-white hover:animate-pulse px-4 py-2" onClick="scrollToElement('about')">About</button>
+                <button class="text-white hover:animate-pulse px-4 py-2" onClick="scrollToElement('price')">Price</button>
+                <button class="text-white hover:animate-pulse px-4 py-2" onClick="scrollToElement('contact')">Contact</button>
+            </div>
+        </div>
+    </nav>
 
-    </section>
-
-    <section id="product" class="flex-col md:grid-cols-3 md:grid px-8 xl:px-36  bg-gradient-to-r from-[#1E3237] via-[#1E3237] to-gray-600 items-end z-0 pt-16 ">
+    <section id="about" class="flex-col md:grid-cols-3 md:grid px-8 xl:px-36  bg-gradient-to-r from-[#1E3237] via-[#1E3237] to-gray-600 items-end z-0 pt-16 ">
         <img src="assets/images/Artboard–1.svg" class="w-full md:hidden" alt="">
         <img src="assets/images/Artboard–5.svg" class="w-full xl:px-8 " alt="">
         <img src="assets/images/Artboard–1.svg" class="w-full hidden md:block" alt="">
@@ -41,11 +45,11 @@
     <div class="h-1 bg-[#26f7e2]"></div>
 
 
-    <div class="parallax h-36 sm:h-48 md:h-56 xl:h-96 bg-fixed bg-center bg-no-repeat bg-cover bg-[url('https://miro.medium.com/max/1400/1*Ec7MJdsUiuVUMkeTw_6y_g.jpeg')]"></div>
+    <div class="parallax h-36 sm:h-48 md:h-56 xl:h-96 bg-fixed bg-center bg-no-repeat bg-cover bg-[url('assets/images/laptop.jpg')]"></div>
 
 
 
-    <section class="pt-16">
+    <section id="price" class="pt-16">
         <blockquote class="text-4xl font-semibold italic text-center text-slate-900 mb-8">
             Convert your
             <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
@@ -54,7 +58,7 @@
             to mobile app
         </blockquote>
         <div class=" flex-col md:grid-cols-3 md:grid px-8 xl:px-36 pt-8">
-            <div class="w-full flex items-center justify-center ">
+            <div class="w-full flex items-center justify-center pt-6 md:pt-0 ">
                 <div class="p-4 w-full max-w-sm rounded-lg border shadow-md sm:p-8 bg-gradient-to-r from-[#1E3237] via-[#1E3237] to-gray-600 border-sky-700 border-4">
                     <h5 class="mb-4 text-xl font-medium text-gray-400 ">Basic plan</h5>
                     <div class="flex items-baseline text-white">
@@ -100,10 +104,9 @@
                             <span class="text-base font-normal leading-tight text-gray-500">Firebase cloud message</span>
                         </li>
                     </ul>
-                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan</button>
                 </div>
             </div>
-            <div class="w-full flex items-center justify-center ">
+            <div class="w-full flex items-center justify-center pt-6 md:pt-0 ">
                 <div class="p-4 w-full max-w-sm rounded-lg border shadow-md sm:p-8 bg-gradient-to-r from-[#1E3237] via-[#1E3237] to-gray-600 border-sky-700 border-4">
                     <h5 class="mb-4 text-xl font-medium text-gray-400 ">Standard plan</h5>
                     <div class="flex items-baseline text-white">
@@ -149,10 +152,9 @@
                             <span class="text-base font-normal leading-tight text-gray-500">Firebase cloud message</span>
                         </li>
                     </ul>
-                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan</button>
                 </div>
             </div>
-            <div class="w-full flex items-center justify-center ">
+            <div class="w-full flex items-center justify-center pt-6 md:pt-0 ">
                 <div class="p-4 w-full max-w-sm rounded-lg border shadow-md sm:p-8 bg-gradient-to-r from-[#1E3237] via-[#1E3237] to-gray-600 border-sky-700 border-4">
                     <h5 class="mb-4 text-xl font-medium text-gray-400 ">Advenced plan</h5>
                     <div class="flex items-baseline text-white">
@@ -165,7 +167,7 @@
                         <li class="flex space-x-3">
                             <!-- Icon -->
                             <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-base font-normal leading-tight text-gray-400 ">2 operating system / Android & IOS</span>
+                            <span class="text-base font-normal leading-tight text-gray-400 ">1 operating system / Android</span>
                         </li>
                         <li class="flex space-x-3">
                             <!-- Icon -->
@@ -198,7 +200,6 @@
                             <span class="text-base font-normal leading-tight text-gray-400 ">Firebase cloud message</span>
                         </li>
                     </ul>
-                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan</button>
                 </div>
             </div>
 
@@ -207,20 +208,18 @@
 
         </div>
     </section>
-    <section class=" flex flex-col justify-center items-center pt-16">
+    <section class=" flex flex-col justify-center items-center pt-16 mb-36" id="contact">
         <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block mb-6">
-            <span class="relative text-xl text-white font-semibold">Buy with:</span>
+            <span class="relative text-xl text-white font-semibold">Contact us with:</span>
         </span>
-        <div class="flex flex-col md:flex-row ">
-            <a href="https://www.fiverr.com/rzadoukankoar/convert-your-website-to-android-app" class="flex justify-center md:mr-24  bg-gradient-to-r from-[#1E3237] via-[#1E3237] to-gray-600 p-4 md:p-8 rounded-lg hover:animate-pulse">
-                <svg width="211" height="64" viewBox="0 0 89 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g fill="#FFFFFF"><path d="m81.6 13.1h-3.1c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-13.4h-2.5c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-18.4h6v2.8c1-2.2 2.3-2.8 4.3-2.8h7.3v2.8c1-2.2 2.3-2.8 4.3-2.8h2zm-25.2 5.6h-12.4c.3 2.1 1.6 3.2 3.7 3.2 1.6 0 2.7-.7 3.1-1.8l5.3 1.5c-1.3 3.2-4.5 5.1-8.4 5.1-6.5 0-9.5-5.1-9.5-9.5 0-4.3 2.6-9.4 9.1-9.4 6.9 0 9.2 5.2 9.2 9.1 0 .9 0 1.4-.1 1.8zm-5.7-3.5c-.1-1.6-1.3-3-3.3-3-1.9 0-3 .8-3.4 3zm-22.9 11.3h5.2l6.6-18.3h-6l-3.2 10.7-3.2-10.8h-6zm-24.4 0h5.9v-13.4h5.7v13.4h5.9v-18.4h-11.6v-1.1c0-1.2.9-2 2.2-2h3.5v-5h-4.4c-4.3 0-7.2 2.7-7.2 6.6v1.5h-3.4v5h3.4z"></path>
-                        </g>
-                        <g fill="#1dbf73"><path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path></g>
-                    </svg>
+        <div class="flex flex-col md:flex-row gap-x-4">
+            <a href="https://bionluk.com/dogukankosar/websitenizi-mobil-uygulama-Android-haline-getiririm-301015" target="_blank" class="border-2 border-gray-200 p-8 mt-6 md:mt-0 rounded-lg hover:animate-pulse flex justify-between items-center gap-x-4">
+                <img src="assets/images/whatsapp.svg" alt="bionluk" class="h-16">
+                <span class="text-black font-sans font-bold text-3xl">WhatsApp</span>
             </a>
-            <a href="https://bionluk.com/dogukankosar/websitenizi-mobil-uygulama-Android-haline-getiririm-301015" class="p-8 mt-6 md:mt-0 rounded-lg hover:animate-pulse">
-                <img src="https://gcdn.bionluk.com/site/general/bionluk_logo_gk.png" alt="bionluk">
+            <a href="https://www.instagram.com/dogukan.kosar/" target="_blank" class="border-2 border-gray-200 p-8 mt-6 md:mt-0 rounded-lg hover:animate-pulse flex justify-between items-center gap-x-4">
+                <img src="assets/images/instagram.svg" alt="bionluk" class="h-16">
+                <span class="text-black font-serif font-bold text-3xl">Instagram</span>
             </a>
         </div>
     </section>
@@ -232,7 +231,7 @@
         <div class="flex flex-col">
             <span class="text-sm text-gray-500 sm:text-center ">© <a href="https://graifstudio.com/" class="hover:underline">Graif Studio - 2022</a>. All Rights Reserved.
             </span>
-            <div class="flex mt-4 space-x-6 sm:justify-center ">
+            <div class="flex mt-4 space-x-6 sm:justify-center hidden">
                 <a href="#" class="text-gray-500 hover:text-gray-900">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
                     <span class="sr-only">Facebook page</span>
